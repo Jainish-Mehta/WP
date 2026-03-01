@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="Resume.php" method="post" enctype="multipart/form-data">
+        <label for="name">Name</label><br>
+        <input type="text" name="Name" placeholder="Enter Name"><br>
+        <label for="mobile">Mobile No.</label><br>
+        <input type="number" name="Mob" placeholder="Enter Mobile No."><br>
+        <label for="email">Email</label><br>
+        <input type="email" name="Email" placeholder="Enter Email"><br>
+        <label for="address">Address</label><br>
+        <textarea name="Address" rows="5" cols="50"></textarea><br>
+        <input type="radio" name="Gender" value="Male">Male
+        <input type="radio" name="Gender" value="Female">Female<br>
+        <label for="photo">Photo</label><br>
+        <input type="file" name="Photo" accept="image/*"><br>
+        <input type="file" name="Aud" accept="audio/*"><br>
+        <input type="file" name="Vid" accept="video/*"><br>
+        <input type="submit" name="Submit" value="Submit">
+    </form>
+</body>
+</html>

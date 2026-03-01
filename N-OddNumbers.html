@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="Inp">
+    <button onclick="Show()">Show</button>
+    <script>
+        function Show(){
+            let num = document.getElementById("Inp").value;
+            let count = 0;
+            if(isNaN(num)){
+                alert("Please Enter a valid number");
+                return;
+            }
+            else{
+                for(let i=1;count<num;i+=2){
+                    document.write(i + "<br>");
+                    count++;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

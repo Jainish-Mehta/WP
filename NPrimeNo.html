@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="num">
+    <button onclick="listPrime()">Show</button>
+    <script>
+        function isPrime(n) {
+            for (let i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        function listPrime() {
+            const num = document.getElementById('num').value;
+            if (isNaN(num)) {
+                alert('Please enter a valid number!');
+            }
+            if (num < 1) {
+                alert('Number must be greater that zero!');
+            }
+            let count = 0;
+            let val = 2;
+            while (count < num) {
+                if (isPrime(val)) {
+                    document.write(val + "<br>");
+                    count++;
+                }
+                val++;
+            }
+        }
+    </script>
+</body>
+
+</html>
