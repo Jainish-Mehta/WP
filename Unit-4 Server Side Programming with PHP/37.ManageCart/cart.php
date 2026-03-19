@@ -8,7 +8,7 @@ if (!isset($_SESSION['cart'])) {
 if (isset($_POST['add'])) {
     $item=trim($_POST['item']);
     $_SESSION['cart'][] = $item;
-    echo '<p style="color=green;">' . $_POST["item"] . ' added to cart</p>';
+    echo '<p style="color:green;">' . $_POST["item"] . ' added to cart</p>';
 }
 
 if(isset($_POST['view'])){
