@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <form action="PassengerForm.php" method="post" enctype="multipart/form-data" style="display: flex; flex-direction: column;">
+        Name:<input type="text" name="name" placeholder="Enter your Name">
+        Mobile: <input type="number" name="mobile" placeholder="Enter your Mobile Number">
+        Email: <input type="email" name="email" placeholder="Enter your Email">
+        Address: <textarea name="address" cols="5" rows="3" placeholder="Enter your Address"></textarea>
+        <div>Gender: <input type="radio" name="gender">Male <input type="radio" name="gender">Female </div> 
+        Photo: <input type="file" name="photo" >
+        <input type="submit" name="submit" value="Submit">
+    </form>
+</body>
+</html>
