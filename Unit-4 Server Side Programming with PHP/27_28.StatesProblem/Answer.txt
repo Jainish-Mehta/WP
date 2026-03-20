@@ -1,0 +1,41 @@
+Why State is a Problem in Web Applications
+HTTP is stateless: Each request from a client to a server is independent. The server does not automatically remember previous interactions.
+
+Impact:
+User data (like login info, shopping cart contents, preferences) is lost between requests.
+Developers must implement mechanisms to maintain continuity across multiple pages.
+
+Techniques for State Management
+    1.  Query String
+    Data is appended to the URL as parameters.
+    Example: page.php?user=Jainish&cart=3
+    Pros: Simple, works without extra setup.
+    Cons: Visible in URL, insecure, limited length.
+
+    2.  Hidden Form Fields
+    Extra <input type="hidden"> fields store data in forms.
+    Example:
+    <form method="post" action="next.php">
+        <input type="hidden" name="user" value="Jainish">
+        <input type="submit" value="Continue">
+    </form>
+
+    Pros: Invisible to user, persists across form submissions.
+    Cons: Only works with forms, can be tampered with.
+
+    3.  Cookies
+    Small text files stored on the client’s browser.
+    Example in PHP:
+    setcookie("username", "Jainish", time() + 3600, "/");
+
+    Pros: Can persist for days/weeks, easy to use.
+    Cons: Less secure, user can disable cookies.
+
+    4.  Sessions
+    Data stored on the server, linked to a unique session ID.
+    Example in PHP:
+    session_start();
+    $_SESSION["username"] = "Jainish";
+
+    Pros: Secure, flexible, supports complex data.
+    Cons: Requires server memory, expires when browser closes (default).

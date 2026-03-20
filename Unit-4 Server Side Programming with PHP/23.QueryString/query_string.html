@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="query_string.php?user=Bob&Age=25">Click here</a>
+    <form action="post.php" method="post">
+        <input type="hidden" name="user" value="Bob">
+        <input type="hidden" name="Age" value="25">
+        <input type="submit" value="Submit">
+    </form>
+    <form action="get.php" method="get">
+        <input type="hidden" name="user" value="Bob">
+        <input type="hidden" name="Age" value="25">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

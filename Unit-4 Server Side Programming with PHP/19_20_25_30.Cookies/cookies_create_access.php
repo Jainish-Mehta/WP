@@ -7,5 +7,4 @@ if (isset($_COOKIE["Key"])) {
     echo "Cookie is not set.";
 }
 
-setcookie("Key", "", time() - 3600);
 ?>

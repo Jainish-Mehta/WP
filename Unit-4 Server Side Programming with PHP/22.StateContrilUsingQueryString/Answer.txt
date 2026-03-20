@@ -1,0 +1,33 @@
+22.Concept of State Management
+Problem: HTTP is a stateless protocol. Each request is independent, 
+and the server does not remember previous interactions.
+Need: Web applications often require continuity 
+(e.g., remembering user login, shopping cart, or preferences).
+Solution: State management techniques like query strings, 
+hidden fields, cookies, and sessions are used to preserve data across requests.
+
+Query String in PHP
+A query string is the portion of a URL that carries data in the form of key–value pairs.
+It begins after a ? symbol and multiple values are separated by &.
+
+How Query Strings Manage State
+Data Transmission: Information is appended to the URL and sent to the server.
+Access in PHP: The server retrieves values using the $_GET superglobal.
+Persistence: By embedding values in the URL, state can be maintained across multiple pages.
+Use Cases: Search engines, navigation links, passing small non‑sensitive data between pages.
+
+Advantages:
+Simple to implement.
+Works without cookies or sessions.
+Useful for bookmarking and sharing URLs with embedded data.
+
+Disadvantages:
+Data visible in the URL (less secure).
+Limited length depending on browser.
+Not suitable for sensitive information.
+
+Summary:
+Query strings are a basic technique for state management in PHP.
+They append data to the URL, which can be accessed using $_GET.
+Best suited for small, non‑sensitive data like search queries or navigation parameters.
+For secure or complex state management, cookies or sessions are preferred.

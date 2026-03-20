@@ -1,0 +1,21 @@
+Concept of Regular Expressions
+A Regular Expression (Regex) is a sequence of characters that defines a search pattern.
+In PHP, regular expressions are used to match, search, and manipulate strings.
+They are powerful tools for form validation, text parsing, and data cleaning.
+
+->Why Use Regular Expressions?
+Validation – Check if input matches a required format (e.g., email, phone number).
+Searching – Find specific patterns in text (e.g., words starting with “A”).
+Replacing – Substitute matched patterns with new text.
+Data Extraction – Extract substrings that match a pattern.
+
+->Regular Expression Functions in PHP
+PHP supports two main regex engines:
+POSIX Functions (older, less common now).
+PCRE (Perl Compatible Regular Expressions) – modern and widely used.
+
+Common PCRE Functions:
+preg_match() → Checks if a pattern exists in a string.
+preg_match_all() → Finds all matches in a string.
+preg_replace() → Replaces matched patterns.
+preg_split() → Splits a string by regex pattern.

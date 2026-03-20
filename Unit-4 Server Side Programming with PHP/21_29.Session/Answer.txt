@@ -1,0 +1,15 @@
+Session in PHP
+Definition:
+A session is a way to store information (variables) on the server and make it available across multiple pages.
+Each user is assigned a unique session ID, usually stored in a cookie or passed via URL.
+
+Characteristics:
+Data is stored on the server, not in the client’s browser.
+More secure than cookies because sensitive information is not exposed to the client.
+Session data persists until the user closes the browser or the session is explicitly destroyed.
+
+Lifecycle of a Session:
+Start a session: session_start() must be called at the beginning of the script.
+Store data: Assign values to the $_SESSION superglobal.
+Access data: Retrieve values from $_SESSION.
+Destroy session: Use session_destroy() to end the session and clear data.

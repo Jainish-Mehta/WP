@@ -1,0 +1,45 @@
+19_25.What is the use cookie in web programming? Write a code 
+to set and display cookies in PHP. (Dec-2023) [NLJIET]
+
+Web applications are built on the HTTP protocol, 
+which is stateless. This means each request from a client to a server is independent, 
+and the server does not automatically remember previous interactions. 
+To overcome this limitation, cookies are used.
+
+What are Cookies?
+A cookie is a small piece of text data stored on the client’s browser by the server.
+Each time the client makes a request, the cookie is sent back to the server, allowing the server to “remember” the user.
+Cookies typically contain information such as user preferences, login details, or session identifiers.
+
+Uses of Cookies
+User Authentication – Remembering login credentials so users don’t need to log in repeatedly.
+Personalization – Storing user preferences like language, theme, or layout.
+Tracking – Monitoring user activity (e.g., last visit time, pages visited).
+Shopping Carts – Remembering selected items across multiple pages.
+Session Management – Linking multiple requests together for continuity.
+Analytics – Collecting data for website statistics and performance.
+
+
+
+30.Explain cookies and sessions in PHP? How can you create, 
+access and delete a cookie in PHP with the help of an 
+example. [NLJIET] 
+
+Definition: Cookies are small text files stored on the client’s browser. 
+They allow the server to remember information across multiple requests.
+
+Use cases: Saving user preferences, login names, or tracking visits
+
+Sessions in PHP
+Definition: Sessions store data on the server side. Each user gets a unique session ID (usually stored in a cookie).
+Difference from cookies: Cookies live in the browser, sessions live on the server (more secure).
+
+Use cases: Login authentication, shopping carts, temporary user data.
+
+
+                    Feature 	Cookies (Client-side) 	Sessions (Server-side)
+
+                    Storage 	Browser             	Server
+                    Security	Less secure	            More secure
+                    Lifetime	Can be long-term	    Ends when browser closes (default)
+                    Use cases	Preferences, tracking	Authentication, carts

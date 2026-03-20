@@ -1,0 +1,23 @@
+
+Point No.   Cookies (Client-side)	                                    Sessions (Server-side)
+
+1           Stored in the user’s browser                                Stored on the server
+
+2	        Less secure (user can view/modify)	                        More secure (hidden from client)
+
+3	        Can persist for days/weeks (expiry settable)	            Default ends when browser closes or destroyed
+
+4	        Limited size (~4 KB per cookie)	Larger storage              possible (limited by server RAM)
+
+5	        Accessible by client-side scripts (JavaScript)	            Accessible only via PHP on server
+
+6	        Sent with every HTTP request	                            Only session ID sent; data stays on server
+
+7	        Can be disabled by user/
+                browser	Depend on server configuration
+
+8	        Stores only strings (complex data needs serialization)	    Can store arrays, objects, nested structures directly
+
+9	        Useful for preferences, tracking, lightweight persistence	Useful for authentication, shopping carts, temporary data
+
+10	        Slightly slower for large data (transmitted each request)	Faster for large/complex data (only ID transmitted)

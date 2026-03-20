@@ -1,0 +1,47 @@
+Different Ways to Pass Information
+1.Query String
+Data is appended to the URL after a ? symbol, in key–value pairs.
+
+Example:
+page2.php?user=Bob&age=25
+
+Accessed in PHP using $_GET.
+
+Pros: Simple, bookmarkable.
+Cons: Visible in URL, limited length, insecure.
+
+2.Hidden Form Fields
+Data stored in <input type="hidden"> elements of a form.
+
+Example:
+html
+<form method="post" action="page2.php">
+    <input type="hidden" name="userId" value="12345">
+    <input type="submit" value="Submit">
+</form>
+
+Accessed in PHP using $_POST.
+
+Pros: Invisible to user, persists across form submissions.
+Cons: Only works with forms, can be tampered with.
+
+3.Cookies
+Small text files stored on the client’s browser.
+
+Example in PHP:
+setcookie("username", "Jainish", time() + 3600, "/");
+echo $_COOKIE["username"];
+
+Pros: Can persist for days/weeks, easy to use.
+Cons: Less secure, user can disable cookies.
+
+4.Sessions
+Data stored on the server, linked to a unique session ID.
+
+Example in PHP:
+session_start();
+$_SESSION["username"] = "Jainish";
+echo $_SESSION["username"];
+
+Pros: Secure, flexible, supports complex data.
+Cons: Requires server memory, expires when browser closes (default).

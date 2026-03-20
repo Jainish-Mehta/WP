@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>Parameter</th>
+            <th>Cookies (Client-side)</th>
+            <th>Sessions (Server-side)</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Stored in the user’s browser</td>
+            <td>Stored on the server</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Less secure (user can view/modify)</td>
+            <td>More secure (hidden from client)</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Can persist for days/weeks (expiry settable)</td>
+            <td>Default ends when browser closes or destroyed</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Limited size (~4 KB per cookie)</td>
+            <td>Larger storage possible (limited by server RAM)</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Accessible by client-side scripts (JavaScript)</td>
+            <td>Accessible only via PHP on server</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Sent with every HTTP request</td>
+            <td>Only session ID sent; data stays on server</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Can be disabled by user/browser</td>
+            <td>Depend on server configuration</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Stores only strings (complex data needs serialization)</td>
+            <td>Can store arrays, objects, nested structures directly</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Useful for preferences, tracking, lightweight persistence</td>
+            <td>Useful for authentication, shopping carts, temporary data</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Slightly slower for large data (transmitted each request)</td>
+            <td>Faster for large/complex data (only ID transmitted)</td>
+        </tr>
+    </table>
+</body>
+
+</html>
