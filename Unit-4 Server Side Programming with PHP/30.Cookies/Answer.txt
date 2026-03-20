@@ -1,0 +1,19 @@
+Cookies in PHP
+Definition: Cookies are small text files stored on the client’s browser. 
+They allow the server to remember information across multiple requests.
+
+Use cases: Saving user preferences, login names, or tracking visits
+
+Sessions in PHP
+Definition: Sessions store data on the server side. Each user gets a unique session ID (usually stored in a cookie).
+Difference from cookies: Cookies live in the browser, sessions live on the server (more secure).
+
+Use cases: Login authentication, shopping carts, temporary user data.
+
+
+                    Feature 	Cookies (Client-side) 	Sessions (Server-side)
+
+                    Storage 	Browser             	Server
+                    Security	Less secure	            More secure
+                    Lifetime	Can be long-term	    Ends when browser closes (default)
+                    Use cases	Preferences, tracking	Authentication, carts
