@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Event Handling Example</title>
+</head>
+
+<body>
+
+    <h2>JavaScript Event Handling</h2>
+
+    <button onclick="clickEvent()">Click</button><br><br>
+
+    <input type="text" onkeyup="keyEvent()" placeholder="Type something"><br><br>
+
+    <form onsubmit="return submitForm()">
+        <input type="text" placeholder="Enter name">
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function clickEvent() {
+
+            alert("Mouse Click Event");
+        }
+
+        function keyEvent() {
+
+            console.log("Key pressed");
+        }
+
+        function submitForm() {
+
+            alert("Form Submitted");
+            return false; // prevents actual submission
+        }
+    </script>
+
+</body>
+
+</html>

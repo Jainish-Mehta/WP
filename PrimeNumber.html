@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" id="Inp">
+    <button onclick="CheckPrime()">Check Prime</button>
+    <script>
+        function isPrime(num) {
+            for(let i=2;i<Math.sqrt(num);i++){
+                if(num%i==0){
+                    return false;
+                }
+            }
+            return true;
+         }
+        function CheckPrime() {
+            const num = document.getElementById("Inp").value;
+            if (isNaN(num)) { alert("Please enter a valid Number."); 
+                return; 
+            }
+            else if(num<2){
+                alert("Please enter a number greater than 1");
+                return;
+            }
+            else{
+                if(isPrime(num)){
+                    alert(num + " is a Prime Number.");
+                }
+                else{
+                    alert(num + " is not a Prime Number.");
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

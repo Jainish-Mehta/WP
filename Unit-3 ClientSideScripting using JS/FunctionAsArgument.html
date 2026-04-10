@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Function as Argument Example</title>
+</head>
+
+<body>
+
+    <h2>Function as Argument Demo</h2>
+
+    <!-- Buttons to trigger operations -->
+    <button onclick="performOperation(add)">Add</button>
+    <button onclick="performOperation(multiply)">Multiply</button>
+
+    <p id="result"></p>
+
+    <script>
+        function add(a, b, z) {
+            return a + b + z;
+        }
+
+        function multiply(a, b, z) {
+            return a * b * z;
+        }
+
+        function performOperation(operation) {
+            let x = 16;
+            let y = 15;
+            let z = 17;
+            let result = operation(x, y, z);
+            document.getElementById("result").innerHTML = "Result: " + result;
+        }
+    </script>
+
+</body>
+
+</html>
