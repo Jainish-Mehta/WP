@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Ajax txt file</title>
+        <script>
+            function loadData(){
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET","data.txt",true);
+                xhr.onreadystatechange = function(){
+                    if(this.readyState == 4 && this.status == 200){
+                        document.getElementById("output").innerHTML = this.responseText;
+                    }
+                };
+                xhr.send();
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Ajax Demo</h2>
+        <button onclick="loadData()">load file</button>
+        <div id="output"></div>
+    </body>
+</html>

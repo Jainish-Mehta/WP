@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Form Validation</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#myForm").submit(function(event){
+                let name = $("#name").val().trim();
+                let email = $("#email").val().trim();
+                let errorMsg = "";
+
+                // Validate name
+                if(name === ""){
+                    errorMsg += "Name is required.<br>";
+                }
+
+                // Validate email with regex
+                let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                if(email === ""){
+                    errorMsg += "Email is required.<br>";
+                } else if(!emailPattern.test(email)){
+                    errorMsg += "Invalid email format.<br>";
+                }
+
+                // Show error messages if any
+                if(errorMsg !== ""){
+                    $("#error").html(errorMsg);
+                    event.preventDefault(); // Stop form submission
+                } else {
+                    $("#error").html(""); // Clear errors
+                    alert("Form submitted successfully!");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>jQuery Input Validation Demo</h2>
+    <form id="myForm">
+        <label>Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label>Email:</label>
+        <input type="text" id="email" name="email"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <div id="error" style="color:red;"></div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <form onsubmit="return validateEmail()">
+            <input type="number" id="mob" placeholder="Enter your mobile number">
+            <input type="email" id="email" name="email" placeholder="Enter your Email">
+            <button type="submit">Submit</button>
+        </form>
+        <script>
+            function validateEmail(){
+                let email = document.getElementById("email").value;
+                let mob = document.getElementById("mob").value;
+                let mobPattern = /^[0-9]{10}$/;
+                let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+                if(!pattern.test(email)){
+                    alert("Invalid Email Address");
+                    return false;
+                }
+                if(!mobPattern.test(mob)){
+                    alert("Invalid Mobile Number");
+                    return false;
+                }
+            }
+            alert("Mobile No. and Email Address is valid");
+        </script>
+    </body>
+</html>
