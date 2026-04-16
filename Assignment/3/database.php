@@ -44,6 +44,13 @@ if ($res->num_rows > 0) {
     echo "No records found";
 }
 
+$sql = "UPDATE eg SET name='Eve' WHERE `index`='101'";
+if ($conn->query($sql) === TRUE) {
+    echo "Record updated successfully<br>";
+} else {
+    echo "Error updating record: " . $conn->error;
+}
+
 $sql = "DELETE FROM eg WHERE `index`='101'";
 if ($conn->query($sql) === TRUE) {
     echo "Record deleted successfully<br>";

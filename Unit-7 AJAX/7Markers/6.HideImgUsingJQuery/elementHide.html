@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Element Hide Using jQuery</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <script>
+            $().ready(function(){
+                $('#element').click(function(){
+                    $(this).hide();
+                });
+            });
+        </script>
+        <h2 id="element">Click me to hide</h2>
+    </body>
+</html>

@@ -13,7 +13,7 @@
                 $('#validatebtn').click(function(){
                     var name =$('#name').val().trim();
                     var email =$('#email').val().trim();
-                    var emailPattern=/^[^ ]+@[^ ]+.[a-z]{2,3}$/;
+                    var emailPattern=/^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
                     if(name === '' || email === ''){
                         $('#validation-result').html('<p style="color: red;">Please fill in all fields.</p>');
                         return;

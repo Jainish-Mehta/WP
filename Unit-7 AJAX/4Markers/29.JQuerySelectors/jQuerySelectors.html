@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery Selector Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#username").css("color", "blue");
+            $(".highlight").css("background-color", "yellow");
+            $("p").css("font-size", "16px");
+            $("input[type='text']").val("Default text");
+            $("li:first").css("font-weight", "bold");
+        });
+    </script>
+</head>
+
+<body>
+    <p id="username">This is a paragraph with ID 'username'.</p>
+    <p class="highlight">This is a highlighted paragraph.</p>
+    <p>Another paragraph.</p>
+
+    <input type="text" placeholder="Enter text">
+    <input type="password" placeholder="Enter password">
+
+    <ul>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ul>
+</body>
+
+</html>
