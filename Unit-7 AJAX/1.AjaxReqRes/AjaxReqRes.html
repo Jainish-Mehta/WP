@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Ajax Request and Response</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <input type="text" id="name" name="name" placeholder="Enter your name">
+        <button id="sendbtn">Send</button>
+        <div id="response"></div>
+        <script>
+            $(document).ready(function(){
+                $('#sendbtn').click(function(){
+                    var namevar =$('#name').val();
+                    $.ajax({
+                        url:'AjaxReqRes.php',
+                        type:'POST',
+                        data:{name:namevar},
+                        success:function(response){
+                            $('#response').html(response);
+                        },
+                        error:function(){
+                            $('#response').html('An error occurred while processing the request.');
+                        }
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

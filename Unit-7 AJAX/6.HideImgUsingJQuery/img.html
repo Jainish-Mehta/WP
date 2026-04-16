@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Hide Image Using jQuery</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <style>
+            #img {
+                width: 200px;
+                height: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="DungeonLogo.png" alt="img" id="img">
+        <h2>Click Image to Hide/Show</h2>
+        <button id="toggle-btn">Show Image</button>
+        <script>
+            $(document).ready(function(){
+                $('#img').click(function(){
+                    $(this).toggle();
+                });
+                $('#toggle-btn').click(function(){
+                    $('#img').show();
+                });
+            });
+        </script>
+    </body>
+</html>

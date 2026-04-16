@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>User Validation Using Ajax</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="validation-result"></div>
+        <input type="text" name="name" id="name" placeholder="Enter your name">
+        <input type="email" name="email" id="email" placeholder="Enter your email">
+        <button id="validatebtn">Validate</button>
+        <script>
+            $(document).ready(function(){
+                $('#validatebtn').click(function(){
+                    var name =$('#name').val().trim();
+                    var email =$('#email').val().trim();
+                    var emailPattern=/^[^ ]+@[^ ]+.[a-z]{2,3}$/;
+                    if(name === '' || email === ''){
+                        $('#validation-result').html('<p style="color: red;">Please fill in all fields.</p>');
+                        return;
+                    }
+                    if(!emailPattern.test(email)){
+                        $('#validation-result').html('<p style="color: red;">Please enter a valid email address.</p>');
+                        return;
+                    }
+                    $('#validation-result').html('<p style="color: green;">Validation successful!</p>');
+                });
+            });
+        </script>
+    </body>
+</html>

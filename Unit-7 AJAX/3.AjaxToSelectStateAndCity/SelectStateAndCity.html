@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Select State and City</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+    <body style="display: flex; flex-direction: column; align-items: start; justify-content: top; height: 100vh;">
+        <label for="State">Select State:</label>
+        <select name="state" id="state">
+            <option value="">---Select State---</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Maharastra">Maharastra</option>
+            <option value="Rajasthan">Rajasthan</option>
+        </select><br><br>
+        <label for="City">Select City:</label>
+        <select name="city" id="city">
+            <option value="">---Select City---</option>
+        </select>
+        <script>
+            $(document).ready(function(){
+                $('#state').change(function(){
+                    var state = $(this).val();
+                    $.ajax({
+                        url:'SelectStateAndCity.php',
+                        type:'POST',
+                        data:{state:state},
+                        success:function(response){
+                            $('#city').html(response);
+                        },
+                        error:function(){
+                            $('#city').html('<option value="">An error occurred while fetching cities.</option>');
+                        }
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
