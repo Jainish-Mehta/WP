@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <title>Employee Details</title>
+    <style>
+        #form1{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: aquamarine;
+        }
+        #form2{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color:bisque;
+        }
+        #form3{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color:thistle;
+        }
+        #form4{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color:deeppink;
+        }
+        body{
+            background-color:cornflowerblue;
+            margin: 0%;
+            padding: 0%;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="insert.php" method="post" id="form1">
+        <label for="eid">Employee ID:</label>
+        <input type="number" name="eid" placeholder="Enter Employee ID" required><br>
+        <label for="name">Name:</label>
+        <input type="text" name="name" placeholder="Enter Name" required><br>
+        <label for="department">Department:</label>
+        <input type="text" name="department" placeholder="Enter Department" required><br>
+        <label for="designation">Designation:</label>
+        <input type="text" name="designation" placeholder="Enter Designation" required><br>
+        <input type="submit" name="submit" value="Insert">
+    </form>
+    <form action="delete.php" method="post" id="form2">
+        <label for="eid">Employee ID:</label>
+        <input type="number" name="eid" placeholder="Enter Employee ID"><br>
+        <input type="submit" name="submit" value="Delete">
+    </form>
+    <form action="update.php" method="post" id="form3">
+        <label for="eid">NEW Employee ID:</label>
+        <input type="number" name="eid" placeholder="Enter Employee ID" required><br>
+        <label for="name">NEW Name:</label>
+        <input type="text" name="name" placeholder="Enter Name" required><br>
+        <label for="department">NEW Department:</label>
+        <input type="text" name="department" placeholder="Enter Department" required><br>
+        <label for="designation">NEW Designation:</label>
+        <input type="text" name="designation" placeholder="Enter Designation" required><br>
+        <input type="submit" name="submit" value="Update">
+    </form>
+    <form action="display.php" method="post" id="form4">
+        <label for="eid">Employee ID:</label>
+        <input type="number" name="eid" placeholder="Enter Employee ID"><br>
+        <input type="submit" name="submit" value="Display">
+    </form>
+</body>
+
+</html>
